@@ -195,7 +195,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map(({ label, value, icon: Icon, color, bg, border, sub }, idx) => (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -299,10 +299,12 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-4">
 
         {/* Heatmap Area */}
-        <div className="bg-card border border-border rounded-xl p-4 shadow-sm overflow-hidden min-h-[220px] flex flex-col justify-center">
+        <div className="bg-card border border-border rounded-xl p-4 shadow-sm min-h-[220px] flex flex-col justify-center overflow-hidden">
           <h3 className="font-bold text-foreground text-sm mb-1 uppercase tracking-wider text-muted-foreground">Contribution DNA</h3>
-          <div className="-ml-3 mt-4 overflow-x-auto no-scrollbar">
-            <ContributionHeatmap username={user?.githubUsername || 'Shubham-k-yadav'} />
+          <div className="mt-4 overflow-x-auto no-scrollbar">
+            <div className="min-w-[800px]">
+              <ContributionHeatmap username={user?.githubUsername || 'Shubham-k-yadav'} />
+            </div>
           </div>
         </div>
 
@@ -331,7 +333,7 @@ export default function Dashboard() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 mb-4 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 relative z-10">
             <div className="p-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <p className="text-[9px] font-bold text-emerald-500 uppercase mb-0.5">Velocity</p>
               <p className="text-xs font-bold text-foreground">+12% Up</p>

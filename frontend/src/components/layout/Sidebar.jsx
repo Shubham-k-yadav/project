@@ -55,7 +55,7 @@ export default function Sidebar() {
         </NavLink>
 
         {/* Desktop Nav Bar - GitHub Style */}
-        <nav className="hidden md:flex flex-1 items-center gap-1">
+        <nav className="hidden xl:flex flex-1 items-center gap-1">
           {navItems.map(({ to, icon: Icon, label }) => (
             <NavLink
               key={to}
@@ -105,7 +105,7 @@ export default function Sidebar() {
         {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-muted transition-colors"
+          className="xl:hidden w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-muted transition-colors"
           title="Menu"
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
